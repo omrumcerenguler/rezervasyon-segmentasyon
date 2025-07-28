@@ -1,0 +1,5 @@
+pyodbc
+pandas
+scikit-learn
+matplotlib
+python-dotenv
