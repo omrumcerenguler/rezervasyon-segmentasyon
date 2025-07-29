@@ -147,3 +147,4 @@ if __name__ == "__main__": # Programın ana fonksiyonu çalıştırılır
     print("\n" + "="*40 + "\n")
     # Ana fonksiyonu çağır 
     main()
+    
