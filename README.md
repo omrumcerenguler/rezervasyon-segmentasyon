@@ -76,7 +76,25 @@ rez. segmantasyon/
 ├── requirements.txt
 ├── .env
 └── README.md
+
 ```
+
+### Veritabanı Tablosu: `Rezervasyonlar`
+
+| Sütun Adı             | Veri Tipi           | Açıklama                                 |
+|-----------------------|---------------------|------------------------------------------|
+| Id                    | int                 | Rezervasyonun benzersiz kimliği          |
+| KullaniciId           | int                 | Rezervasyonu yapan kullanıcı             |
+| MekanId               | int                 | Rezervasyon yapılan mekan                |
+| StartDate             | datetime            | Rezervasyonun başlangıç zamanı           |
+| EndDate               | datetime            | Rezervasyonun bitiş zamanı               |
+| Durum                 | int                 | Rezervasyonun durumu (1: Onaylı, 2: Bekliyor vb.) |
+| Aciklama              | nvarchar(max)       | Rezervasyonla ilgili açıklama            |
+| Subject               | nvarchar(max) / NULL| Konu başlığı (isteğe bağlı)              |
+| ReddedildiMi          | bit (0/1)           | Rezervasyon reddedildi mi                |
+| ReddetmeAciklamasi    | nvarchar(max) / NULL| Reddetme nedeni (eğer varsa)             |
+| OwnerId               | int / NULL          | Rezervasyonun ait olduğu kişi ID'si      |
+
 
 ---
 
@@ -184,6 +202,21 @@ rez. segmantasyon/
 ├── .env
 └── README.md
 ```
+### Database Table: `Reservations`
+
+| Column Name           | Data Type           | Description                              |
+|-----------------------|---------------------|------------------------------------------|
+| Id                    | int                 | Unique ID of the reservation             |
+| KullaniciId           | int                 | User who made the reservation            |
+| MekanId               | int                 | Venue of the reservation                 |
+| StartDate             | datetime            | Start time of the reservation            |
+| EndDate               | datetime            | End time of the reservation              |
+| Durum                 | int                 | Status of reservation (1: Approved, 2: Pending etc.) |
+| Aciklama              | nvarchar(max)       | Additional description                   |
+| Subject               | nvarchar(max) / NULL| Subject line (optional)                  |
+| ReddedildiMi          | bit (0/1)           | Was the reservation rejected?            |
+| ReddetmeAciklamasi    | nvarchar(max) / NULL| Reason for rejection (if any)            |
+| OwnerId               | int / NULL          | ID of the person who owns the reservation|
 
 ---
 

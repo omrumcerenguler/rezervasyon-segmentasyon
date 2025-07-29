@@ -1,1 +1,7 @@
 .env
+__pycache__/
+*.pyc
+*.pkl
+.vscode/
+figures/
+.DS_Store
